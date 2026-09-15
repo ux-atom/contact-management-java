@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane stylesheets="@../css/styles.css" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactmanagement.DashboardController" prefWidth="1280.0" prefHeight="720.0">
+    <left>
+        <VBox styleClass="sidebar" prefWidth="240.0" spacing="8.0">
+            <HBox alignment="CENTER_LEFT" spacing="12.0" style="-fx-padding: 0 0 24 0;">
+                <FontIcon iconLiteral="fas-address-book" iconSize="24" style="-fx-fill: #00A86B;" />
+                <Label text="Contacts" styleClass="section-title"/>
+            </HBox>
+            <VBox spacing="4.0" VBox.vgrow="ALWAYS">
+                <Button text="Dashboard" styleClass="sidebar-btn, sidebar-btn-active" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-home" iconSize="16"/></graphic>
+                </Button>
+                <Button text="Contacts" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-users" iconSize="16"/></graphic>
+                </Button>
+                <Button text="Favorites" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-heart" iconSize="16"/></graphic>
+                </Button>
+                <Button text="Groups" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-layer-group" iconSize="16"/></graphic>
+                </Button>
+                <Button text="Recent" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-clock" iconSize="16"/></graphic>
+                </Button>
+                <Button text="Trash" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-trash" iconSize="16"/></graphic>
+                </Button>
+            </VBox>
+            <VBox spacing="4.0">
+                <Button text="Settings" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-cog" iconSize="16"/></graphic>
+                </Button>
+                <Button text="About" styleClass="sidebar-btn" maxWidth="Infinity">
+                    <graphic><FontIcon iconLiteral="fas-info-circle" iconSize="16"/></graphic>
+                </Button>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" spacing="12.0" style="-fx-padding: 16 0 0 0; -fx-border-color: #E5E7EB transparent transparent transparent;">
+                <Circle radius="16.0" style="-fx-fill: #D1D5DB;"/>
+                <VBox>
+                    <Label text="Ziyadul Islam" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                    <Label text="2024000010077@seu.edu.bd" styleClass="caption"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button styleClass="btn-icon">
+                    <graphic><FontIcon iconLiteral="fas-sign-out-alt" iconSize="14"/></graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </left>
+    <center>
+        <BorderPane>
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="24.0" style="-fx-padding: 24 32 24 32; -fx-background-color: #FFFFFF; -fx-border-color: transparent transparent #E5E7EB transparent;">
+                    <Label text="Dashboard" styleClass="page-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <HBox alignment="CENTER_LEFT" styleClass="search-box" maxWidth="300.0">
+                        <FontIcon iconLiteral="fas-search" iconSize="14" style="-fx-fill: #9CA3AF;" />
+                        <TextField promptText="Search contacts..." style="-fx-background-color: transparent; -fx-border-width: 0;" HBox.hgrow="ALWAYS"/>
+                    </HBox>
+                    <Button styleClass="btn-icon">
+                        <graphic><FontIcon iconLiteral="fas-bell" iconSize="16"/></graphic>
+                    </Button>
+                    <Button styleClass="btn-icon">
+                        <graphic><FontIcon iconLiteral="fas-moon" iconSize="16"/></graphic>
+                    </Button>
+                </HBox>
+            </top>
+            <center>
+                <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+                    <VBox spacing="32.0" style="-fx-padding: 32;">
+                        <GridPane hgap="24.0" vgap="24.0">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                            </columnConstraints>
+                            <HBox styleClass="stat-card" GridPane.columnIndex="0" spacing="16.0" alignment="CENTER_LEFT">
+                                <StackPane styleClass="stat-icon-container">
+                                    <FontIcon iconLiteral="fas-users" iconSize="20" style="-fx-fill: #00A86B;" />
+                                </StackPane>
+                                <VBox spacing="4.0">
+                                    <Label text="Total Contacts" styleClass="secondary-text"/>
+                                    <Label text="1,248" styleClass="page-title"/>
+                                </VBox>
+                            </HBox>
+                            <HBox styleClass="stat-card" GridPane.columnIndex="1" spacing="16.0" alignment="CENTER_LEFT">
+                                <StackPane styleClass="stat-icon-container" style="-fx-background-color: #FEF3C7;">
+                                    <FontIcon iconLiteral="fas-heart" iconSize="20" style="-fx-fill: #F59E0B;" />
+                                </StackPane>
+                                <VBox spacing="4.0">
+                                    <Label text="Favorites" styleClass="secondary-text"/>
+                                    <Label text="42" styleClass="page-title"/>
+                                </VBox>
+                            </HBox>
+                            <HBox styleClass="stat-card" GridPane.columnIndex="2" spacing="16.0" alignment="CENTER_LEFT">
+                                <StackPane styleClass="stat-icon-container" style="-fx-background-color: #E0E7FF;">
+                                    <FontIcon iconLiteral="fas-layer-group" iconSize="20" style="-fx-fill: #4F46E5;" />
+                                </StackPane>
+                                <VBox spacing="4.0">
+                                    <Label text="Groups" styleClass="secondary-text"/>
+                                    <Label text="8" styleClass="page-title"/>
+                                </VBox>
+                            </HBox>
+                            <HBox styleClass="stat-card" GridPane.columnIndex="3" spacing="16.0" alignment="CENTER_LEFT">
+                                <StackPane styleClass="stat-icon-container" style="-fx-background-color: #FCE7F3;">
+                                    <FontIcon iconLiteral="fas-clock" iconSize="20" style="-fx-fill: #DB2777;" />
+                                </StackPane>
+                                <VBox spacing="4.0">
+                                    <Label text="Recently Added" styleClass="secondary-text"/>
+                                    <Label text="14" styleClass="page-title"/>
+                                </VBox>
+                            </HBox>
+                        </GridPane>
+                        <VBox styleClass="card" spacing="16.0" VBox.vgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT">
+                                <Label text="Recent Contacts" styleClass="section-title"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Button text="View All" styleClass="btn-secondary"/>
+                            </HBox>
+                            <TableView fx:id="recentContactsTable" prefHeight="300.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="colName" text="Name" prefWidth="250.0"/>
+                                    <TableColumn fx:id="colPhone" text="Phone" prefWidth="150.0"/>
+                                    <TableColumn fx:id="colEmail" text="Email" prefWidth="200.0"/>
+                                    <TableColumn fx:id="colCompany" text="Company" prefWidth="150.0"/>
+                                    <TableColumn text="Action" prefWidth="100.0"/>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </VBox>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>

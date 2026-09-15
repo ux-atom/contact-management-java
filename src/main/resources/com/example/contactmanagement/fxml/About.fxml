@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane stylesheets="@../css/styles.css" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" spacing="32.0" maxWidth="600.0" maxHeight="500.0" styleClass="card" style="-fx-padding: 48;">
+        <FontIcon iconLiteral="fas-address-book" iconSize="64" style="-fx-fill: #00A86B;" />
+        
+        <VBox alignment="CENTER" spacing="8.0">
+            <Label text="Contact Management System" styleClass="page-title"/>
+            <Label text="Version 1.0.0" styleClass="secondary-text"/>
+        </VBox>
+        
+        <GridPane vgap="16.0" hgap="24.0" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="120.0"/>
+                <ColumnConstraints halignment="LEFT" minWidth="200.0"/>
+            </columnConstraints>
+            
+            <Label text="Developed By:" styleClass="secondary-text" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="Ziyadul Islam" styleClass="body-text" style="-fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            
+            <Label text="Student ID:" styleClass="secondary-text" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label text="2024000010077" styleClass="body-text" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            
+            <Label text="University:" styleClass="secondary-text" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label text="Southeast University" styleClass="body-text" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            
+            <Label text="Course:" styleClass="secondary-text" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label text="Advanced Java Programming" styleClass="body-text" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </GridPane>
+        
+        <Region VBox.vgrow="ALWAYS" minHeight="16.0"/>
+        
+        <VBox alignment="CENTER" spacing="8.0" style="-fx-padding: 16 0 0 0;" styleClass="detail-footer">
+            <Label text="Built with JavaFX 17 &amp; Scene Builder" styleClass="caption"/>
+            <HBox alignment="CENTER" spacing="12.0">
+                <Button styleClass="btn-icon"><graphic><FontIcon iconLiteral="fab-github" iconSize="20"/></graphic></Button>
+                <Button styleClass="btn-icon"><graphic><FontIcon iconLiteral="fas-globe" iconSize="20"/></graphic></Button>
+            </HBox>
+        </VBox>
+    </VBox>
+</StackPane>

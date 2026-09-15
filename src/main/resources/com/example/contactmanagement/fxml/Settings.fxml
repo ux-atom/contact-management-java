@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<ScrollPane fitToWidth="true" stylesheets="@../css/styles.css" styleClass="root, scroll-pane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactmanagement.SettingsController">
+    <VBox spacing="32.0" style="-fx-padding: 40;" alignment="TOP_CENTER">
+        <HBox alignment="CENTER_LEFT" maxWidth="800.0">
+            <VBox>
+                <Label text="Settings" styleClass="page-title"/>
+                <Label text="Manage your account settings and preferences" styleClass="secondary-text"/>
+            </VBox>
+        </HBox>
+        
+        <VBox styleClass="card" spacing="24.0" maxWidth="800.0">
+            <Label text="Profile" styleClass="section-title"/>
+            <HBox spacing="24.0" alignment="CENTER_LEFT">
+                <Circle radius="32.0" style="-fx-fill: #E5E7EB;"/>
+                <VBox spacing="4.0">
+                    <Label text="Ziyadul Islam" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                    <Label text="2024000010077@seu.edu.bd" styleClass="secondary-text"/>
+                    <Label text="Southeast University" styleClass="caption"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Edit Profile" styleClass="btn-secondary"/>
+            </HBox>
+        </VBox>
+
+        <VBox styleClass="card" spacing="24.0" maxWidth="800.0">
+            <Label text="Appearance" styleClass="section-title"/>
+            <HBox spacing="32.0">
+                <VBox spacing="8.0" alignment="CENTER">
+                    <StackPane prefWidth="120.0" prefHeight="80.0" style="-fx-background-color: #F3F4F6; -fx-background-radius: 8px; -fx-border-color: #00A86B; -fx-border-width: 2px; -fx-border-radius: 8px;">
+                        <FontIcon iconLiteral="fas-sun" iconSize="24" style="-fx-fill: #F59E0B;"/>
+                    </StackPane>
+                    <RadioButton fx:id="lightThemeRadio" text="Light" selected="true" styleClass="body-text"/>
+                </VBox>
+                <VBox spacing="8.0" alignment="CENTER">
+                    <StackPane prefWidth="120.0" prefHeight="80.0" style="-fx-background-color: #1F2937; -fx-background-radius: 8px;">
+                        <FontIcon iconLiteral="fas-moon" iconSize="24" style="-fx-fill: #D1D5DB;"/>
+                    </StackPane>
+                    <RadioButton fx:id="darkThemeRadio" text="Dark" styleClass="body-text"/>
+                </VBox>
+                <VBox spacing="8.0" alignment="CENTER">
+                    <StackPane prefWidth="120.0" prefHeight="80.0" style="-fx-background-color: linear-gradient(to right, #F3F4F6 50%, #1F2937 50%); -fx-background-radius: 8px;">
+                        <FontIcon iconLiteral="fas-desktop" iconSize="24" style="-fx-fill: #9CA3AF;"/>
+                    </StackPane>
+                    <RadioButton fx:id="systemThemeRadio" text="System" styleClass="body-text"/>
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <VBox styleClass="card" spacing="24.0" maxWidth="800.0">
+            <Label text="Application" styleClass="section-title"/>
+            <GridPane hgap="32.0" vgap="24.0">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+                
+                <HBox alignment="CENTER_LEFT" spacing="16.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Language" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                        <Label text="Select application language" styleClass="caption"/>
+                    </VBox>
+                    <ComboBox promptText="English (US)" styleClass="combo-box" prefWidth="120.0"/>
+                </HBox>
+                
+                <HBox alignment="CENTER_LEFT" spacing="16.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Font Size" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                        <Label text="Adjust UI text size" styleClass="caption"/>
+                    </VBox>
+                    <ComboBox promptText="Medium" styleClass="combo-box" prefWidth="120.0"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="16.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Animations" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                        <Label text="Enable UI transitions" styleClass="caption"/>
+                    </VBox>
+                    <CheckBox selected="true"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="16.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label text="Notifications" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                        <Label text="Show alerts for events" styleClass="caption"/>
+                    </VBox>
+                    <CheckBox selected="true"/>
+                </HBox>
+            </GridPane>
+        </VBox>
+    </VBox>
+</ScrollPane>

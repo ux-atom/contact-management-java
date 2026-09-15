@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox stylesheets="@../css/styles.css" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="page-header">
+        <Label text="Recent Contacts" styleClass="page-title"/>
+    </HBox>
+    <ScrollPane fitToWidth="true" styleClass="scroll-pane" VBox.vgrow="ALWAYS">
+        <VBox spacing="16.0" style="-fx-padding: 32;" alignment="TOP_CENTER">
+            <VBox maxWidth="800.0" spacing="16.0">
+                <!-- Timeline Item -->
+                <HBox styleClass="card" spacing="24.0" alignment="CENTER_LEFT">
+                    <Circle radius="24.0" style="-fx-fill: #E5E7EB;"/>
+                    <VBox spacing="4.0">
+                        <Label text="Mehzabin Chowdhury" styleClass="section-title"/>
+                        <Label text="Added today at 10:45 AM" styleClass="secondary-text"/>
+                    </VBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="+880 1888-234567" styleClass="body-text"/>
+                    <Region prefWidth="24.0"/>
+                    <Button text="Quick Call" styleClass="btn-secondary">
+                        <graphic><FontIcon iconLiteral="fas-phone-alt" iconSize="14"/></graphic>
+                    </Button>
+                </HBox>
+                <!-- Timeline Item -->
+                <HBox styleClass="card" spacing="24.0" alignment="CENTER_LEFT">
+                    <Circle radius="24.0" style="-fx-fill: #E5E7EB;"/>
+                    <VBox spacing="4.0">
+                        <Label text="Farhan Ahmed" styleClass="section-title"/>
+                        <Label text="Added yesterday at 3:20 PM" styleClass="secondary-text"/>
+                    </VBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="+880 1544-556677" styleClass="body-text"/>
+                    <Region prefWidth="24.0"/>
+                    <Button text="Quick Call" styleClass="btn-secondary">
+                        <graphic><FontIcon iconLiteral="fas-phone-alt" iconSize="14"/></graphic>
+                    </Button>
+                </HBox>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+</VBox>

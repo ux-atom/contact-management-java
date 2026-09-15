@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<SplitPane stylesheets="@../css/styles.css" styleClass="root" dividerPositions="0.25" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox spacing="0" styleClass="group-panel">
+        <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="page-header" style="-fx-padding: 24 16;">
+            <Label text="Groups" styleClass="page-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button styleClass="btn-icon"><graphic><FontIcon iconLiteral="fas-plus" iconSize="16"/></graphic></Button>
+        </HBox>
+        <ListView fx:id="groupList" styleClass="list-view" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent; -fx-border-width: 0;"/>
+        <VBox spacing="8.0" style="-fx-padding: 16;">
+            <Label text="Family" styleClass="body-text, group-item, group-item-active"/>
+            <Label text="Friends" styleClass="body-text, group-item"/>
+            <Label text="University" styleClass="body-text, group-item"/>
+            <Label text="Office" styleClass="body-text, group-item"/>
+        </VBox>
+    </VBox>
+
+    <VBox spacing="0">
+        <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="page-header">
+            <VBox>
+                <Label text="Family" styleClass="page-title"/>
+                <Label text="12 members" styleClass="secondary-text"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Add to Group" styleClass="btn-secondary">
+                <graphic><FontIcon iconLiteral="fas-user-plus" iconSize="14"/></graphic>
+            </Button>
+            <Button styleClass="btn-icon"><graphic><FontIcon iconLiteral="fas-ellipsis-v" iconSize="16"/></graphic></Button>
+        </HBox>
+        <VBox style="-fx-padding: 24;" VBox.vgrow="ALWAYS">
+            <TableView fx:id="groupContactsTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="Name" prefWidth="250.0"/>
+                    <TableColumn text="Phone" prefWidth="150.0"/>
+                    <TableColumn text="Email" prefWidth="200.0"/>
+                    <TableColumn text="Action" prefWidth="100.0"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </VBox>
+</SplitPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane stylesheets="@../css/styles.css" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" spacing="24.0" maxWidth="400.0" maxHeight="500.0" styleClass="login-card">
+        <FontIcon iconLiteral="fas-address-book" iconSize="48" style="-fx-fill: #00A86B;" />
+        <VBox alignment="CENTER" spacing="8.0">
+            <Label text="Contact Management" styleClass="page-title"/>
+            <Label text="Sign in to your account" styleClass="secondary-text"/>
+        </VBox>
+        <VBox spacing="16.0" VBox.vgrow="ALWAYS">
+            <VBox spacing="8.0">
+                <Label text="Email Address" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="emailField" promptText="you@university.edu" styleClass="text-input" prefHeight="40.0"/>
+            </VBox>
+            <VBox spacing="8.0">
+                <Label text="Password" styleClass="body-text" style="-fx-font-weight: bold;"/>
+                <PasswordField fx:id="passwordField" promptText="••••••••" styleClass="text-input" prefHeight="40.0"/>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
+                <CheckBox fx:id="rememberMeCheck" text="Remember me" styleClass="body-text"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Hyperlink text="Forgot Password?" style="-fx-text-fill: #00A86B;"/>
+            </HBox>
+        </VBox>
+        <VBox spacing="12.0" prefWidth="Infinity">
+            <Button fx:id="loginBtn" text="Login" styleClass="btn-primary" maxWidth="Infinity" prefHeight="44.0"/>
+            <Button fx:id="exitBtn" text="Exit" styleClass="btn-secondary" maxWidth="Infinity" prefHeight="44.0"/>
+        </VBox>
+        <Label text="Version 1.0.0" styleClass="caption"/>
+    </VBox>
+</StackPane>

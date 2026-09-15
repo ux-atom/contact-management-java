@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox stylesheets="@../css/styles.css" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="page-header">
+        <VBox>
+            <Label text="Trash" styleClass="page-title"/>
+            <Label text="Contacts in trash will be deleted forever after 30 days" styleClass="secondary-text"/>
+        </VBox>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Empty Trash" styleClass="btn-danger">
+            <graphic><FontIcon iconLiteral="fas-trash-alt" iconSize="14"/></graphic>
+        </Button>
+    </HBox>
+    <StackPane VBox.vgrow="ALWAYS" style="-fx-padding: 32;">
+        <!-- Empty State -->
+        <VBox fx:id="emptyState" alignment="CENTER" spacing="16.0" visible="false">
+            <FontIcon iconLiteral="fas-trash" iconSize="64" styleClass="empty-state-icon"/>
+            <Label text="Trash is empty" styleClass="empty-state-title"/>
+            <Label text="No contacts have been deleted recently." styleClass="empty-state-text"/>
+        </VBox>
+        
+        <!-- Data State -->
+        <TableView fx:id="trashTable">
+            <columns>
+                <TableColumn text="Name" prefWidth="250.0"/>
+                <TableColumn text="Phone" prefWidth="150.0"/>
+                <TableColumn text="Deleted Date" prefWidth="200.0"/>
+                <TableColumn text="Action" prefWidth="200.0"/>
+            </columns>
+        </TableView>
+    </StackPane>
+</VBox>

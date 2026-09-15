@@ -1,0 +1,383 @@
+/* =========================================
+   Root & Base Styling
+   ========================================= */
+.root {
+    -fx-font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    -fx-background-color: #F7F8FA;
+    -fx-text-fill: #111827;
+}
+
+/* =========================================
+   Typography
+   ========================================= */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+.body-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #374151;
+}
+.secondary-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+.caption {
+    -fx-font-size: 11px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* =========================================
+   Sidebar
+   ========================================= */
+.sidebar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent #E5E7EB transparent transparent;
+    -fx-border-width: 1px;
+    -fx-padding: 24 16 24 16;
+}
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6B7280;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-cursor: HAND;
+    -fx-graphic-text-gap: 12;
+}
+.sidebar-btn .ikonli-font-icon {
+    -fx-fill: #9CA3AF;
+    -fx-icon-size: 16;
+}
+.sidebar-btn:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+}
+.sidebar-btn:hover .ikonli-font-icon {
+    -fx-fill: #374151;
+}
+.sidebar-btn-active {
+    -fx-background-color: #E6F6F0;
+    -fx-text-fill: #00A86B;
+    -fx-font-weight: bold;
+}
+.sidebar-btn-active .ikonli-font-icon {
+    -fx-fill: #00A86B;
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.btn-primary {
+    -fx-background-color: #00A86B;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8px;
+    -fx-cursor: HAND;
+    -fx-font-size: 14px;
+    -fx-graphic-text-gap: 8;
+}
+.btn-primary:hover {
+    -fx-background-color: #008C59;
+}
+.btn-primary .ikonli-font-icon {
+    -fx-fill: white;
+}
+.btn-secondary {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #374151;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 9 19 9 19;
+    -fx-font-weight: bold;
+    -fx-cursor: HAND;
+    -fx-graphic-text-gap: 8;
+}
+.btn-secondary:hover {
+    -fx-background-color: #F9FAFB;
+}
+.btn-secondary .ikonli-font-icon {
+    -fx-fill: #374151;
+}
+.btn-danger {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: #EF4444;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8px;
+    -fx-cursor: HAND;
+    -fx-graphic-text-gap: 8;
+}
+.btn-danger:hover {
+    -fx-background-color: #FCA5A5;
+}
+.btn-danger .ikonli-font-icon {
+    -fx-fill: #EF4444;
+}
+.btn-icon {
+    -fx-background-color: transparent;
+    -fx-padding: 8;
+    -fx-background-radius: 8px;
+    -fx-cursor: HAND;
+}
+.btn-icon:hover {
+    -fx-background-color: #F3F4F6;
+}
+.btn-icon .ikonli-font-icon {
+    -fx-fill: #6B7280;
+}
+.btn-icon:hover .ikonli-font-icon {
+    -fx-fill: #111827;
+}
+
+/* =========================================
+   Inputs (TextField, PasswordField)
+   ========================================= */
+.text-field, .password-field, .text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 14px;
+    -fx-text-fill: #111827;
+    -fx-prompt-text-fill: #9CA3AF;
+}
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #00A86B;
+    -fx-border-width: 2px;
+    -fx-padding: 9 11 9 11;
+}
+.combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 4 8 4 8;
+}
+.combo-box .list-view {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+}
+.combo-box .list-cell {
+    -fx-padding: 8 12;
+    -fx-text-fill: #374151;
+}
+.combo-box .list-cell:hover {
+    -fx-background-color: #F3F4F6;
+}
+
+/* =========================================
+   Search Box
+   ========================================= */
+.search-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 6 16 6 16;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+}
+.search-box .ikonli-font-icon {
+    -fx-fill: #9CA3AF;
+}
+.search-box .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 0;
+    -fx-font-size: 14px;
+}
+.search-box .text-field:focused {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 0;
+}
+
+/* =========================================
+   Page Header
+   ========================================= */
+.page-header {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+    -fx-padding: 24 32 24 32;
+}
+
+/* =========================================
+   Cards
+   ========================================= */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 10, 0, 0, 2);
+    -fx-padding: 24;
+}
+.login-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 24px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 20, 0, 0, 10);
+    -fx-padding: 40;
+}
+.stat-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12px;
+    -fx-padding: 20;
+    -fx-cursor: HAND;
+}
+.stat-card:hover {
+    -fx-border-color: #00A86B;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,168,107,0.1), 10, 0, 0, 4);
+}
+.stat-icon-container {
+    -fx-background-color: #E6F6F0;
+    -fx-background-radius: 8px;
+    -fx-padding: 12;
+}
+
+/* =========================================
+   Detail Panel (right side)
+   ========================================= */
+.detail-panel {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent transparent #E5E7EB;
+}
+.detail-footer {
+    -fx-border-color: #E5E7EB transparent transparent transparent;
+    -fx-padding: 16 32 16 32;
+}
+
+/* =========================================
+   Groups Panel
+   ========================================= */
+.group-panel {
+    -fx-background-color: #FFFFFF;
+}
+.group-item {
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 8px;
+    -fx-cursor: HAND;
+}
+.group-item-active {
+    -fx-background-color: #F3F4F6;
+}
+
+/* =========================================
+   TableView
+   ========================================= */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+.table-view .column-header-background {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 12px 12px 0 0;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 48px;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #6B7280;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 0 0 0 16px;
+}
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #F3F4F6 transparent;
+    -fx-cell-size: 56px;
+}
+.table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.table-row-cell:hover {
+    -fx-background-color: #F9FAFB;
+}
+.table-row-cell:selected {
+    -fx-background-color: #E6F6F0;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #00A86B;
+}
+.table-view .table-cell {
+    -fx-text-fill: #111827;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 16px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* =========================================
+   Badges / Chips
+   ========================================= */
+.badge-group {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #4B5563;
+    -fx-padding: 4 12 4 12;
+    -fx-background-radius: 16px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.badge-favorite {
+    -fx-background-color: #FEF3C7;
+    -fx-text-fill: #D97706;
+}
+
+/* =========================================
+   Scrollbars
+   ========================================= */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: #D1D5DB;
+    -fx-background-radius: 4px;
+}
+.scroll-bar:vertical .thumb:hover, .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #9CA3AF;
+}
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button,
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+    -fx-shape: " ";
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* =========================================
+   Empty States
+   ========================================= */
+.empty-state-icon {
+    -fx-fill: #D1D5DB;
+}
+.empty-state-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+.empty-state-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<ScrollPane fitToWidth="true" stylesheets="@../css/styles.css" styleClass="root, scroll-pane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" prefWidth="800.0" prefHeight="720.0">
+    <VBox spacing="32.0" style="-fx-padding: 40;" alignment="TOP_CENTER">
+        <HBox alignment="CENTER_LEFT">
+            <Button styleClass="btn-icon"><graphic><FontIcon iconLiteral="fas-arrow-left" iconSize="16"/></graphic></Button>
+            <Region prefWidth="16.0"/>
+            <Label text="Add New Contact" styleClass="page-title"/>
+        </HBox>
+        <VBox styleClass="card" spacing="32.0" maxWidth="800.0">
+            <HBox spacing="24.0" alignment="CENTER_LEFT">
+                <Circle radius="40.0" style="-fx-fill: #F3F4F6;"/>
+                <VBox spacing="8.0">
+                    <Button text="Upload Photo" styleClass="btn-secondary"/>
+                    <Label text="Allowed formats: JPG, PNG. Max size: 2MB." styleClass="caption"/>
+                </VBox>
+            </HBox>
+            
+            <VBox spacing="16.0">
+                <Label text="Personal Information" styleClass="section-title"/>
+                <GridPane hgap="24.0" vgap="24.0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50"/>
+                        <ColumnConstraints percentWidth="50"/>
+                    </columnConstraints>
+                    <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="First Name" styleClass="body-text"/>
+                        <TextField promptText="John" styleClass="text-field"/>
+                    </VBox>
+                    <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="Last Name" styleClass="body-text"/>
+                        <TextField promptText="Doe" styleClass="text-field"/>
+                    </VBox>
+                    <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <Label text="Phone Number" styleClass="body-text"/>
+                        <TextField promptText="+1 (555) 000-0000" styleClass="text-field"/>
+                    </VBox>
+                    <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label text="Email Address" styleClass="body-text"/>
+                        <TextField promptText="john@example.com" styleClass="text-field"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+
+            <VBox spacing="16.0">
+                <Label text="Professional Information" styleClass="section-title"/>
+                <GridPane hgap="24.0" vgap="24.0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50"/>
+                        <ColumnConstraints percentWidth="50"/>
+                    </columnConstraints>
+                    <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label text="Company" styleClass="body-text"/>
+                        <TextField promptText="Acme Corp" styleClass="text-field"/>
+                    </VBox>
+                    <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label text="Job Title" styleClass="body-text"/>
+                        <TextField promptText="Software Engineer" styleClass="text-field"/>
+                    </VBox>
+                    <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <Label text="Group" styleClass="body-text"/>
+                        <ComboBox promptText="Select Group" styleClass="combo-box" maxWidth="Infinity"/>
+                    </VBox>
+                </GridPane>
+            </VBox>
+
+            <VBox spacing="16.0">
+                <Label text="Additional Details" styleClass="section-title"/>
+                <VBox spacing="8.0">
+                    <Label text="Address" styleClass="body-text"/>
+                    <TextArea prefRowCount="3" promptText="Full Address..." styleClass="text-area"/>
+                </VBox>
+                <VBox spacing="8.0">
+                    <Label text="Notes" styleClass="body-text"/>
+                    <TextArea prefRowCount="4" promptText="Any extra notes..." styleClass="text-area"/>
+                </VBox>
+            </VBox>
+            
+            <HBox alignment="CENTER_RIGHT" spacing="16.0" style="-fx-padding: 16 0 0 0; -fx-border-color: #E5E7EB transparent transparent transparent;">
+                <Button text="Cancel" styleClass="btn-secondary"/>
+                <Button text="Save Contact" styleClass="btn-primary"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</ScrollPane>
